@@ -35,6 +35,10 @@ app.get('/data',(req,res)=>{
  res.json(data)
 })
 
+app.get('/about',(req,res)=>{
+ res.send('This is about page')
+})
+
 
 const port = process.env.PORT || 3000
 
