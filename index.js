@@ -1,7 +1,11 @@
 const { config } = require('dotenv')
 config()
 const express = require('express')
+const path = require('path')
 const app = express()
+
+// Serve static files from the "public" folder
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 const data = {
     "tenant": "ukride",
